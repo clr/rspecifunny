@@ -1,9 +1,8 @@
+require 'rubygems'
 require 'spec'
-
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-
-require 'rspecifunny'
-
-Spec::Runner.configure do |config|
-  
+if RUBY_VERSION == "1.8.6"
+elsif RUBY_VERSION == "1.9.1"
+  require 'spec/autorun'
+else
 end
+
