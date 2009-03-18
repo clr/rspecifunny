@@ -1,0 +1,50 @@
+Mar 06 03:14:41 ideablob rails[14366]: Processing AboutController#index (for 124.82.58.193 at 2008-03-06 03:14:41) [GET]
+Mar 06 03:14:41 ideablob rails[14366]: Session ID: 0943fa9b9ab8d8ba6294bc4014958253
+Mar 06 03:14:41 ideablob rails[14366]: Parameters: {"action"=>"index", "controller"=>"about"}
+Mar 06 03:14:41 ideablob rails[14366]: Rendering  within layouts/application
+Mar 06 03:14:41 ideablob rails[14366]: Rendering about/index
+Mar 06 03:14:41 ideablob rails[14366]: Rendered about/_actions (0.00013)
+Mar 06 03:14:41 ideablob rails[14366]: Completed in 0.00634 (157 reqs/sec) | Rendering: 0.00615 (96%) | DB: 0.00000 (0%) | 200 OK [http://www.ideablob.com/about]
+Mar 06 03:14:46 ideablob rails[14369]: Processing IdeasController#show (for 66.249.73.197 at 2008-03-06 03:14:46) [GET]
+Mar 06 03:14:46 ideablob rails[14369]: Session ID: 685d52d3b63a59a71f8ff9872a138d93
+Mar 06 03:14:46 ideablob rails[14369]: Parameters: {"action"=>"show", "id"=>"1002--Scan-A-Gift-will-assist-t", "controller"=>"ideas"}
+Mar 06 03:14:46 ideablob rails[14369]: [4;35;1mIdea Load (0.000530)[0m   [0mSELECT * FROM ideas WHERE (ideas.deleted_at IS NULL) AND (ideas."id" = 1002) [0m
+Mar 06 03:14:46 ideablob rails[14369]: [4;36;1mChallenge Load (0.000227)[0m   [0;1mSELECT * FROM challenges WHERE (challenges.idea_id = 1002) [0m
+Mar 06 03:14:46 ideablob rails[14369]: [4;35;1mAdvice Load (0.000354)[0m   [0mSELECT * FROM advices WHERE (advices.deleted_at IS NULL) AND (advices.advisable_id = 1002 AND advices.advisable_type = 'Idea') ORDER BY created_at desc[0m
+Mar 06 03:14:46 ideablob rails[14369]: [4;36;1mIdea Load (0.277623)[0m   [0;1mSELECT distinct ideas.* FROM ideas WHERE (ideas.deleted_at IS NULL) AND ((ideas.public = true) and (ideas.category_id = 7) and (ideas.created_at < '2007-12-16 16:24:52.237677') and (ideas.daily_rank <= 0)) ORDER BY ideas.created_at desc LIMIT 1[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mIdea Load (0.281017)[0m   [0mSELECT distinct ideas.* FROM ideas WHERE (ideas.deleted_at IS NULL) AND ((ideas.public = true) and (ideas.category_id = 7) and (ideas.created_at > '2007-12-16 16:24:52.237677') and (ideas.daily_rank <= 0)) ORDER BY ideas.created_at asc LIMIT 1[0m
+Mar 06 03:14:47 ideablob rails[14369]: Rendering  within layouts/application
+Mar 06 03:14:47 ideablob rails[14369]: Rendering ideas/show
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mFinalist Load (0.000468)[0m   [0;1mSELECT * FROM finalists WHERE (finalists.idea_id = 1002) LIMIT 1[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mCategory Load (0.000225)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 7) [0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mCycle Load (0.000336)[0m   [0;1mSELECT * FROM cycles WHERE (start_date<='2008-03-06 03:14:47.061893' AND end_date>='2008-03-06 03:14:47.061893') LIMIT 1[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mShowdown Load (0.000231)[0m   [0mSELECT * FROM showdowns WHERE (showdowns."id" = 7) [0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mCycle Load (0.000208)[0m   [0;1mSELECT * FROM cycles WHERE (cycles."id" = 25) [0m
+Mar 06 03:14:47 ideablob rails[14369]: Rendered votes/_form (0.00156)
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mUser Load (0.000443)[0m   [0mSELECT * FROM users WHERE (users.deleted_at IS NULL) AND (users."id" = 8357) [0m
+Mar 06 03:14:47 ideablob rails[14369]: Rendered common/_send_to_a_friend (0.00052)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered common/_get_idea_link (0.00119)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered flags/_form (0.00126)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered ideas/_other_actions (0.00574)
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mProfilePicture Load (0.000346)[0m   [0;1mSELECT * FROM profile_pictures WHERE (profile_pictures.user_id = 8357) LIMIT 1[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mRole Load Including Associations (0.001286)[0m   [0mSELECT roles."id" AS t0_r0, roles."user_id" AS t0_r1, roles."species" AS t0_r2, roles."created_at" AS t0_r3, users."id" AS t1_r0, users."first_name" AS t1_r1, users."last_name" AS t1_r2, users."admin" AS t1_r3, users."captcha_id" AS t1_r4, users."login" AS t1_r5, users."email" AS t1_r6, users."crypted_password" AS t1_r7, users."salt" AS t1_r8, users."created_at" AS t1_r9, users."updated_at" AS t1_r10, users."remember_token" AS t1_r11, users."remember_token_expires_at" AS t1_r12, users."activation_code" AS t1_r13, users."activated_at" AS t1_r14, users."openid_url" AS t1_r15, users."date_of_birth" AS t1_r16, users."city" AS t1_r17, users."state" AS t1_r18, users."country" AS t1_r19, users."contactable" AS t1_r20, users."industry" AS t1_r21, users."interests" AS t1_r22, users."about_me" AS t1_r23, users."email_votes" AS t1_r24, users."email_comments" AS t1_r25, users."email_idea_submitted" AS t1_r26, users."email_news" AS t1_r27, users."current_customer" AS t1_r28, users."agreed" AS t1_r29, users."agreed_on" AS t1_r30, users."agreed_ip" AS t1_r31, users."deleted_at" AS t1_r32, users."phone" AS t1_r33, users."address" AS t1_r34, users."address2" AS t1_r35, users."zip" AS t1_r36, users."email_featured_idea" AS t1_r37, users."expertise" AS t1_r38 FROM roles LEFT OUTER JOIN users ON users.id = roles.user_id WHERE (species = 3) ORDER BY roles.created_at desc[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mRole Load (0.000291)[0m   [0;1mSELECT * FROM roles WHERE (roles.user_id = 8357) AND (roles."species" = 3) LIMIT 1[0m
+Mar 06 03:14:47 ideablob rails[14369]: Rendered users/_advisor_badge (0.00630)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered ideas/_idea_header (0.03111)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered ideas/_description (0.00066)
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mComment Load (0.000422)[0m   [0mSELECT * FROM comments WHERE (comments.deleted_at IS NULL) AND (comments.commentable_id = 1002 AND comments.commentable_type = 'Idea') ORDER BY created_at[0m
+Mar 06 03:14:47 ideablob rails[14369]: Rendered comments/_form (0.00116)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered ideas/_comments (0.00280)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered ideas/_challenges (0.00023)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered advices/_form (0.00091)
+Mar 06 03:14:47 ideablob rails[14369]: Rendered ideas/_advice (0.00179)
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mTag Load (0.000588)[0m   [0;1mSELECT tags.* FROM tags INNER JOIN taggings ON tags.id = taggings.tag_id WHERE ((taggings.taggable_type = 'Idea') AND (taggings.taggable_id = 1002)) [0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mIdea Update (0.001074)[0m   [0mUPDATE ideas SET "created_at" = '2007-12-16 16:24:52.237677', "views" = 82, "reason_for_deleting" = NULL, "deleted_at" = NULL, "category_id" = 7, "public" = 't', "request_ip" = NULL, "advices_count" = 0, "answer" = '“Scan A Gift” will assist those who struggle to purchase correct gifts for the holidays, birthdays, anniversaries, other special occasions', "advice_count" = NULL, "daily_rank" = 0, "classroom_id" = NULL, "description" = '“Scan A Gift” a personal scanner that scans UPC labels thus going beyond traditional boundary lines department stores established for gift registries. While shopping at a mall, my wife identifies Christmas gifts and scans each item (scanner records store, item, and price). My wife indicates the size, color, quantity, etc. Once done shopping, she gives me the scanner which I download to my computer and presto! I know every gift she wants and am able to give her a usable gift… a gift she desires that is the right size, the right color, the right style, the right quantity. ', "updated_at" = '2008-03-06 03:14:47.107272', "user_id" = 8357, "comments_count" = 0, "disneyworld" = 'I would continue with my business plan and begin recruiting experts for my team who can assist in product development, UPC codes, scanning readers, and overall retail technological advances.' WHERE "id" = 1002[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mEvent Create (0.000410)[0m   [0mINSERT INTO events ("message", "visible", "deleted_at", "showdown_id", "news_type", "news_id", "user_id", "created_at", "created_at_string") VALUES('updated', 'f', NULL, NULL, 'Idea', 1002, 8357, '2008-03-06 03:14:47.112362', NULL)[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mSQL (0.000134)[0m   [0;1mSELECT currval('events_id_seq')[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mSQL (0.000378)[0m   [0mCOMMIT[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mEvent Load (0.001963)[0m   [0;1mSELECT * FROM events WHERE (events.deleted_at IS NULL) AND (events.news_id = 1002 AND events.news_type = 'Idea') [0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+Mar 06 03:14:47 ideablob rails[14369]: [4;36;1mSQL (0.000091)[0m   [0;1mCOMMIT[0m
+Mar 06 03:14:47 ideablob rails[14369]: Completed in 0.63735 (1 reqs/sec) | Rendering: 0.04450 (6%) | DB: 0.56887 (89%) | 200 OK [http://www.ideablob.com/ideas/1002--Scan-A-Gift-will-assist-t]
