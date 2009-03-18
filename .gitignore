@@ -1,5 +1,6 @@
 *.sw?
 .DS_Store
 **~
-log/*
+log/*.txt
+log/*.gz
 coverage
