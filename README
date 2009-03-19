@@ -1,7 +1,7 @@
 rspecifunny===========
-Description goes here.
+Rspecs, rakes, and straight ruby to demonstrate the differences between 1.8 and 1.9.  Of course, you have to have 1.9 installed to see the differences side-by-side.  I compared REE1.8 with 1.9.1p.  I installed the latter to /opt/ruby-1.9/ by setting the --prefix= flag at configure.  So: `./configure --prefix='/opt/ruby-1.9/'`
 
 COPYRIGHT
 =========
 
-Copyright (c) 2008 clr. See LICENSE for details.
+Copyright (c) 2009 clr. See LICENSE for details.
